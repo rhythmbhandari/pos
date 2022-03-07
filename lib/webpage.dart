@@ -1,21 +1,22 @@
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class WebPage extends StatefulWidget {
+  const WebPage({Key? key, required this.title}) : super(key: key);
   static const platform =
   const MethodChannel('com.pax.demo.base');
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<WebPage> createState() => _WebPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _WebPageState extends State<WebPage> {
   @override
   void initState() {
     WidgetsFlutterBinding.ensureInitialized();
